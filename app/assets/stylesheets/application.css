@@ -1,0 +1,102 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require font-awesome
+ *= require_self
+ *= require_tree .
+ *= require jquery.mobile
+ */
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.ui-page{
+  background-color: #A7A7A7 !important;
+}
+
+#alert-content {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+#toolbarback, #toolbarhome {
+  background-color: #3388CC;
+  color: white;
+}
+
+.ui-grid-b img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.ui-grid-b div {
+  margin: 0 auto;
+}
+
+.center {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#btngroup {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+#loginbtn {
+  background-color: #d9d9d9;
+  border-color: #cccccc;
+}
+
+#facebookbtn {
+  background-color: #3B5998;
+  border-color: #cccccc;
+  color: white;
+}
+
+#signupbtn {
+  background-color: #00cc00;
+  border-color: #cccccc;
+}
+
+.imgcontainer {
+  margin-top: 20px;
+}
+
+#logo {
+  border-color: #A7A7A7;
+  box-shadow: none;
+}
+
+#getpaid {
+  font-size:20px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.fields {
+  margin-left: 10px;
+  margin-right: 10px;
+}

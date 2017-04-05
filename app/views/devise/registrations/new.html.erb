@@ -1,0 +1,30 @@
+<div class="ui-grid-b">
+  <div class="ui-block-a"></div>
+  <div class="ui-block-b">
+    <%= image_tag('user.png') %>
+  </div>
+  <div class="ui-block-c"></div>
+</div>
+
+<h2 class="center">Sign up</h2>
+
+<div data-role="content">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
+
+    <%= f.email_field :email, placeholder: 'Email' %>
+
+    <%= f.password_field :password, autocomplete: "off", placeholder: 'Password' %>
+
+    <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: 'Confirm Password' %>
+
+    <%= f.submit "Sign up" %>
+
+  <% end %>
+
+  <div class="center">
+    <%= link_to :back do %>
+      <i class="fa fa-arrow-left"></i> Go Back
+    <% end %>
+  </div>
+</div>

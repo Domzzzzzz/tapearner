@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tap Earner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<% if user_signed_in? %>
+  <% if @home_toolbar %>
+    <%= render 'layouts/toolbarhome' %>
+  <% else %>
+    <%= render 'layouts/toolbarback' %>
+  <% end %>
+<% end %>
+
+<%= yield %>
+
+<% flash.each do |type, content| %>
+  <% if content.respond_to?('each')
+    content.each do |item| %>
+      <%= render 'layouts/alert', type: type, content: item %>
+    <% end %>
+  <% else %>
+    <%= render 'layouts/alert', type: type, content: content %>
+  <% end %>
+<% end %>
+
+<% if user_signed_in? %>
+  <%= render 'layouts/footernav' %>
+<% end %>
+
+</body>
+</html>

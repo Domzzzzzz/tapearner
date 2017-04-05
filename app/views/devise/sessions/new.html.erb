@@ -1,0 +1,32 @@
+<div class="ui-grid-b">
+  <div class="ui-block-a"></div>
+  <div class="ui-block-b">
+    <%= image_tag('user.png') %>
+  </div>
+  <div class="ui-block-c"></div>
+</div>
+
+<h2 class="center">Log in</h2>
+
+<div data-role="content">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+    <%= f.email_field :email, placeholder: 'Email' %>
+
+    <%= f.password_field :password, autocomplete: "off", placeholder: 'password' %>
+
+    <% if devise_mapping.rememberable? -%>
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+    <% end -%>
+
+    <%= f.submit 'Login' %>
+
+  <% end %>
+
+  <div class="center">
+    <%= link_to :back do %>
+      <i class="fa fa-arrow-left"></i> Go Back
+    <% end %>
+  </div>
+</div>

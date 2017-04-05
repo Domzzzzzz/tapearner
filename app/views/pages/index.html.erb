@@ -1,0 +1,29 @@
+<div data-role="page">
+  <div class="ui-grid-b imgcontainer">
+    <div class="ui-block-a"></div>
+    <div class="ui-block-b">
+      <%= image_tag('tapearnerlogo.png', id: 'logo') %>
+    </div>
+    <div class="ui-block-c"></div>
+  </div>
+
+  <div class="center">
+    <h2>Tap Earner</h2>
+    <p id="getpaid">Get paid to download apps, watch videos, & complete surveys!</p>
+  </div>
+
+  <div id="btngroup">
+    <%= link_to new_user_session_path, id: 'loginbtn', class: 'ui-btn ui-shadow ui-corner-all' do %>
+      <i class="fa fa-envelope"></i> Login with Email
+    <% end %>
+
+    <!-- TODO: finish omniauthable for facebook login -->
+    <%= link_to '#', id: 'facebookbtn', class: 'ui-btn ui-shadow ui-corner-all' do %>
+      <i class="fa fa-facebook-square"></i> Login with Facebook
+    <% end %>
+
+    <%= link_to new_user_registration_path, id: 'signupbtn', class: 'ui-btn ui-shadow ui-corner-all' do %>
+      <i class="fa fa-user-plus"></i> Sign Up
+    <% end %>
+  </div>
+</div>
